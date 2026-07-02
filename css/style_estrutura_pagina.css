@@ -9,3 +9,14 @@
 }
 
 /*CRIANDO VARIÁVEIS*/
+:root{
+    --cor01: #eee8e8fa;
+    --cor02: #9ff8ece1;
+    --cor03: #fafc94d0;
+    --branca: #e8ebe5;  
+}
+
+/*FORMATANDO A TAG main PELO ID geral*/
+#geral{
+    margin: 20px;
+}
