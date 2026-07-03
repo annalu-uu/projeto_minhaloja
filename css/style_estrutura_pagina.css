@@ -40,3 +40,40 @@
     gap: 30px;
     list-style: none;
 }
+
+menu ul ing{
+    width: 25px;
+    height: 25px;
+}
+
+/*FORMATANDO SECTION pesquisa*/
+#pesquisa{
+    height: 200px;
+    background-color: #ba9bdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pesquisa input{
+    width: 650px;
+    height: 80px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.4em;
+    color: var(--cor02);
+}
+
+#pesquisa input::placeholder{
+    font-size: 1.3em;
+    font-style: italic;
+    color: #c3abe0;
+}
+
+/*FORMATANDO OS CARDS*/
+#cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 20px
+}
