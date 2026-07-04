@@ -115,43 +115,43 @@ button{
     height: 40PX;
 }
 
-/* Fundo da página */
+/*FUNDO*/
 body{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f2f2f2;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: #e1d0d0;
 }
 
-/* Caixa do formulário */
+/*FORMULÁRIO CAIXA*/
 #div-form{
     width: 600px;
     margin: 40px auto;
-    background: #fff;
+    background: #f9f0f0;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Título */
+/*TÍTULO*/
 #div-form h3{
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Formulário */
+/*FORMULÁRIO*/
 #div-formulario{
     display: flex;
     flex-direction: column;
 }
 
-/* Labels */
+/*LABELS*/
 #div-formulario label{
     margin-top: 10px;
     font-weight: bold;
 }
 
-/* Campos */
+/*CAMPOS*/
 #div-formulario input{
     width: 100%;
     padding: 10px;
@@ -161,7 +161,7 @@ body{
     box-sizing: border-box;
 }
 
-/* Área dos botões */
+/*BOTÕES*/
 .botoes{
     display: flex;
     justify-content: center;
@@ -169,9 +169,9 @@ body{
     margin-top: 25px;
 }
 
-/* Botão Cadastrar */
+/*BOTÃO DE CADASTRO*/
 #btn-cadastrar{
-    background: #28a745;
+    background: #7228a7;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -179,9 +179,9 @@ body{
     cursor: pointer;
 }
 
-/* Botão Limpar */
+/*BOTÃO DE LIMPAR*/
 #btn-limpar{
-    background: #dc3545;
+    background: #275adb;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -191,5 +191,5 @@ body{
 
 #btn-cadastrar:hover,
 #btn-limpar:hover{
-    opacity: 0.8;
+    opacity: 0.9;
 }
