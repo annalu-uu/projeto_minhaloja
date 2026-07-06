@@ -21,60 +21,130 @@
                 <li><a href="/paginas/cadastro.html"> Cadastro </a></li>
                 <li><a href="/paginas/sobre.html"> Sobre </a></li>
                 <li><a href="/paginas/login.html"> Login </a></li>
-                <li><a href="/paginas/carrinho.html"></a></li>
+                <li><a href="/paginas/carrinho.html">Carrinho</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="pesquisa">
-        <input type="text" name="pesquisa" id="pesquisa" 
-        class="input-pesquisa" placeholder="Digite seu produto"> 
-    </section>
-
-    <section id="cards">
-        <div class="card">
-            <img src="imagens/images (11).jfif" alt="Jogo01">
-            <p>Jogo PlayStation</p>
-            <h2>R$ 10,00</h2>
-            <button>Adicionar</button>
+    <div class="container">
+        <h1>Seu Carrinho</h1>
+        
+        <div class="carrinho-wrapper">
+            <div class="itens-carrinho" id="lista-produtos">
+                
+                <div class="produto" data-id="1" data-preco="120.00">
+                    <div class="produto-info">
+                        <div class="produto-img">Camiseta</div>
+                        <div class="produto-detalhes">
+                            <h3>Jogo PlayStation</h3>
+                            <p>R$ 10,00</p>
+                        </div>
+                    </div>
+                    <div class="produto-acoes">
+                        <div class="qtd-seletor">
+                            <button class="qtd-btn" onclick="alterarQuantidade(this, -1)">-</button>
+                            <span class="qtd-valor">1</span>
+                            <button class="qtd-btn" onclick="alterarQuantidade(this, 1)">+</button>
+                        </div>
+                        <button class="btn-remover" onclick="removerProduto(this)">Remover</button>
+                    </div>
+                </div>
+    
+                <div class="produto" data-id="2" data-preco="350.00">
+                    <div class="produto-info">
+                        <div class="produto-img">Jogo</div>
+                        <div class="produto-detalhes">
+                            <h3>Jogo PlayStation</h3>
+                            <p>R$ 10,00</p>
+                        </div>
+                    </div>
+                    <div class="produto-acoes">
+                        <div class="qtd-seletor">
+                            <button class="qtd-btn" onclick="alterarQuantidade(this, -1)">-</button>
+                            <span class="qtd-valor">1</span>
+                            <button class="qtd-btn" onclick="alterarQuantidade(this, 1)">+</button>
+                        </div>
+                        <button class="btn-remover" onclick="removerProduto(this)">Remover</button>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="resumo-carrinho">
+                <h2>Resumo do Pedido</h2>
+                <div class="resumo-linha">
+                    <span>Subtotal</span>
+                    <span id="subtotal">R$ 20,00</span>
+                </div>
+                <div class="resumo-linha">
+                    <span>Frete</span>
+                    <span id="frete">R$ 15,00</span>
+                </div>
+                <div class="resumo-linha resumo-total">
+                    <span>Total</span>
+                    <span id="total">R$ 35,00</span>
+                </div>
+                <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
         </div>
-
-        <div class="card">
-            <img src="imagens/images (11).jfif" alt="Jogo01">
-            <p>Jogo PlayStation</p>
-            <h2>R$ 10,00</h2>
-            <button>Adicionar</button>
-        </div>
-
-        <div class="card">
-            <img src="imagens/images (11).jfif" alt="Jogo01">
-            <p>Jogo PlayStation</p>
-            <h2>R$ 10,00</h2>
-            <button>Adicionar</button>
-        </div>
-
-        <div class="card">
-            <img src="imagens/images (11).jfif" alt="Jogo01">
-            <p>Jogo PlayStation</p>
-            <h2>R$ 10,00</h2>
-            <button>Adicionar</button>
-        </div>
-
-        <div class="card">
-            <img src="imagens/images (11).jfif" alt="Jogo01">
-            <p>Jogo PlayStation</p>
-            <h2>R$ 10,00</h2>
-            <button>Adicionar</button>
-        </div>
-
-        <div class="card">
-            <img src="imagens/images (11).jfif" alt="Jogo01">
-            <p>Jogo PlayStation</p>
-            <h2>R$ 10,00</h2>
-            <button>Adicionar</button>
-        </div>
-
-    </section> 
+    </div>
+    
+    <script>
+        const VALOR_FRETE = 15.00;
+    
+        function calcularTotais() {
+            const produtos = document.querySelectorAll('.produto');
+            let subtotal = 0;
+    
+            produtos.forEach(produto => {
+                const preco = parseFloat(produto.getAttribute('data-preco'));
+                const quantidade = parseInt(produto.querySelector('.qtd-valor').textContent);
+                subtotal += preco * quantidade;
+            });
+    
+            // Se o carrinho estiver vazio, o frete fica zero
+            const freteAtual = produtos.length > 0 ? VALOR_FRETE : 0;
+            const total = subtotal + freteAtual;
+    
+            // Atualiza a tela formatando para moeda local
+            document.getElementById('subtotal').textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+            document.getElementById('frete').textContent = `R$ ${freteAtual.toFixed(2).replace('.', ',')}`;
+            document.getElementById('total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+        }
+    
+        function alterarQuantidade(botao, mudanca) {
+            const elementoQtd = botao.parentNode.querySelector('.qtd-valor');
+            let qtdAtual = parseInt(elementoQtd.textContent);
+            
+            qtdAtual += mudanca;
+    
+            if (qtdAtual >= 1) {
+                elementoQtd.textContent = qtdAtual;
+                calcularTotais();
+            }
+        }
+    
+        function removerProduto(botao) {
+            const produtoElemento = botao.closest('.produto');
+            produtoElemento.remove();
+            
+            const lista = document.getElementById('lista-produtos');
+            if (lista.children.length === 0) {
+                lista.innerHTML = '<p style="color: #777; text-align: center; padding: 20px;">Seu carrinho está vazio.</p>';
+            }
+            
+            calcularTotais();
+        }
+    
+        function finalizarCompra() {
+            const produtos = document.querySelectorAll('.produto');
+            if(produtos.length === 0) {
+                alert("Seu carrinho está vazio!");
+            } else {
+                alert("Pedido enviado com sucesso! Obrigado por comprar conosco.");
+            }
+        }
+    </script>
     
     <footer id="rodape">
         <h2>&copy 2026 SuaLoja S.A. Todos os Diretos Reservados</h2>
