@@ -32,7 +32,7 @@
         <div class="carrinho-wrapper">
             <div class="itens-carrinho" id="lista-produtos">
                 
-                <div class="produto" data-id="1" data-preco="120.00">
+                <div class="produto" data-id="1" data-preco="10.00">
                     <div class="produto-info">
                         <div class="produto-img">Camiseta</div>
                         <div class="produto-detalhes">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
     
-                <div class="produto" data-id="2" data-preco="350.00">
+                <div class="produto" data-id="2" data-preco="20.00">
                     <div class="produto-info">
                         <div class="produto-img">Jogo</div>
                         <div class="produto-detalhes">
@@ -102,11 +102,11 @@
                 subtotal += preco * quantidade;
             });
     
-            // Se o carrinho estiver vazio, o frete fica zero
+            //CARRINHO VAZIO
             const freteAtual = produtos.length > 0 ? VALOR_FRETE : 0;
             const total = subtotal + freteAtual;
     
-            // Atualiza a tela formatando para moeda local
+
             document.getElementById('subtotal').textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
             document.getElementById('frete').textContent = `R$ ${freteAtual.toFixed(2).replace('.', ',')}`;
             document.getElementById('total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
