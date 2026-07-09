@@ -1,195 +1,121 @@
-@import url(style_estrutura_pagina.css);
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: roboto; 
- }
-
-#geral{
-    margin: 20px;
+/*FORMATANDO SECTION CARRINHO*/
+#carrinho{
+    width: 1000px;
+    min-height: 600px;
+    margin: 20px 0px;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
 }
 
-#cabecalho{
+/*FORMATANDO A SECTION itens-carrinho*/
+.item{
     width: 100%;
+    height: 120px;
+    margin: 20px 0px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    justify-content: space-between;
+    color: var(--cor03);
+    border-bottom: 1px solid var(--cor02);
+}
+
+.img-item img{
+    width: 100px;
     height: 100px;
 }
 
-#menu ul{
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-#menu img{
-    width: 35px;
-    height: 35px;
-}
-
-#rodape{
-    width: 100%;
-    height: 180px;
-    background-color: #42008d;
-    margin: 20px 0px;
-    color: var(--branca);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    flex-direction: column;
-}
-
-/*FORMATANDO LINKS*/
-#menu a:link{
-    font-size: 1.4em;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-decoration: none;
-    color: var(--cor02);
-}
-
-#menu a:visited{
-    font-size: 1.4em;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-decoration: none;
-    color: var(--cor02);
-}
-
-#menu a{
-    display: inline-block;
-    transition: transform .3s ease, color .3s ease;
-}
-
-#menu a:hover{
-    transform: translateY(-5px);
-    color: var(--cor01);
-}
-
-#menu a:active{
-    color: var(--cor01);
-}
-
-#div-form{
-    width: 650px;
-    padding: 5px;
-    margin: 20px 0;
-    background-color: rgb(190, 130, 245);
-    color: aliceblue;
-    align-items: center;
-    justify-content: center;
-
-}
-
-#form-cadastro{
-    padding: 15px;
-    font-size: 1.2em;
-}
-
-label, input{
-    display: block;
-    margin: 15px 0;
-}
-
-input{
-    width: 230px;
-    height: 20px;
-}
-
-label{
-    color:  rgb(79, 4, 150);
-}
-
-button{
-    width: 230px;
-    height: 40PX;
-}
-
-/*FUNDO*/
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background: #e1d0d0;
-}
-
-/*FORMULÁRIO CAIXA*/
-#div-form{
+.descricoes-itens{
     width: 600px;
-    margin: 40px auto;
-    background: #f9f0f0;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: 120px;
+    margin: 20px 0px;
 }
 
-/*TÍTULO*/
-#div-form h3{
+.descricao{
+    width: 100%;
+    height: 40px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.valores{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-item{
+    width: 45px;
     text-align: center;
-    margin-bottom: 20px;
+    border: 1px solid var(--cor02);
+    border-radius: 5px;
+    padding: 5px;
 }
 
-/*FORMULÁRIO*/
-#div-formulario{
+
+.img-remover img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/*FORMATANDO A DIV VALORES-CARRINHO*/
+#valores-carrinho{
+    width: 30%;
+    height: 600px;
+    margin: 0px 10px;
+    padding: 15px;
+}
+
+#div-cep, #div-calc-valor, #div-calc-valor-pagar{
+    width: 100%;
+    min-height: 80px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cor02);
+    border-radius: 8px;
 }
 
-/*LABELS*/
-#div-formulario label{
-    margin-top: 10px;
+.titulo-valores-carrinho{
+    margin: 20px;
+    text-transform: uppercase;
+    background-color: var(--cor03);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: var(--branca);
+}
+
+.valor{
+    font-size: 1.8em;
     font-weight: bold;
 }
 
-/*CAMPOS*/
-#div-formulario input{
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+.btn-carrinho{
+    width: 280px;
+    height: 80px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+    color: var(--branca);
     border-radius: 8px;
-    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 1.3em;
 }
 
-/*BOTÕES*/
-.botoes{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 25px;
+#btn-continuar{
+    background-color: var(--cor03);
 }
 
-/*BOTÃO DE CADASTRO*/
-#btn-cadastrar{
-    background: #7228a7;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-/*BOTÃO DE LIMPAR*/
-#btn-limpar{
-    background: #275adb;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-#btn-cadastrar:hover,
-#btn-limpar:hover{
-    opacity: 0.9;
+#btn-finalizar{
+    background-color: var(--cor03);
 }
