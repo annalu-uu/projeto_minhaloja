@@ -57,3 +57,63 @@
     height: 25px;
     cursor: pointer;
 }
+
+/*FORMATANDO A DIV VALORES-CARRINHO*/
+#valores-carrinho{
+    background-color: aqua;
+    width: 30%;
+    height: 600px;
+    margin: 0px 10px;
+    padding: 15px;
+}
+
+#div-cep, #div-calc-valor, #div-calc-valor-pagar{
+    background-color: rgb(165, 230, 230);
+    width: 100%;
+    min-height: 80px;
+    margin: 20px 0px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cor02);
+    border-radius: 8px;
+}
+
+.titulo-valores-carrinho{
+    margin: 200px;
+    text-transform: uppercase;
+    background-color: var(--cor02);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: var(--cor02);
+}
+
+.valor{
+    font-size: 1.8em;
+    color: var(--cor02);
+    font-weight: bold;
+}
+
+.btn-carrinho{
+    width: 260px;
+    height: 80px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+    color: var(--branca);
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+#btn-continuar{
+    background-color: var(--cor03);
+}
+
+#btn-finalizar{
+    background-color: var(--cor02);
+}
+
