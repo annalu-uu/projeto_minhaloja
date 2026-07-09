@@ -26,125 +26,152 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1>Seu Carrinho</h1>
-        
-        <div class="carrinho-wrapper">
-            <div class="itens-carrinho" id="lista-produtos">
+        <section id="pesquisa">
+            <h3>Cadastro Pessoa</h3>
+        </section>
+
+        <section id="carrinho">
+            <section class="itens-carrinho">
+                <section class="item">
+                    <div class="img-item">
+                        <img src="../imagens/images (11).jfif" alt="jogo01">
+                </div>
+                    <div id="descricoes-itens">
+                        <div class="descricao">
+                            Jogo 01
+                    </div>
+                    <div class="valores">
+                        <p>R$ 10,00</p>
+                        <div class="input-quantidade">
+                            <input type="number" nome="quant01" id="quant01" class="input-item" value="1">
+                        </div>
+                        <p>R$ 10,00</p>
+                        <div class="img-remover">
+                            <img src="../imagens/images (12).jfif" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="itens-carrinho">
+                    <section class="item">
+                        <div class="img-item">
+                            <img src="../imagens/images (11).jfif" alt="jogo01">
+                    </div>
+                        <div id="descricoes-itens">
+                            <div class="descricao">
+                                Jogo 01
+                        </div>
+                        <div class="valores">
+                            <p>R$ 10,00</p>
+                            <div class="input-quantidade">
+                                <input type="number" nome="quant01" id="quant01" class="input-item" value="1">
+                            </div>
+                            <p>R$ 10,00</p>
+                            <div class="img-remover">
+                                <img src="../imagens/images (12).jfif" alt="">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="itens-carrinho">
+                        <section class="item">
+                            <div class="img-item">
+                                <img src="../imagens/images (11).jfif" alt="jogo01">
+                        </div>
+                            <div id="descricoes-itens">
+                                <div class="descricao">
+                                    Jogo 01
+                            </div>
+                            <div class="valores">
+                                <p>R$ 10,00</p>
+                                <div class="input-quantidade">
+                                    <input type="number" nome="quant01" id="quant01" class="input-item" value="1">
+                                </div>
+                                <p>R$ 10,00</p>
+                                <div class="img-remover">
+                                    <img src="../imagens/images (12).jfif" alt="">
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="itens-carrinho">
+                            <section class="item">
+                                <div class="img-item">
+                                    <img src="../imagens/images (11).jfif" alt="jogo01">
+                            </div>
+                                <div id="descricoes-itens">
+                                    <div class="descricao">
+                                        Jogo 01
+                                </div>
+                                <div class="valores">
+                                    <p>R$ 10,00</p>
+                                    <div class="input-quantidade">
+                                        <input type="number" nome="quant01" id="quant01" class="input-item" value="1">
+                                    </div>
+                                    <p>R$ 10,00</p>
+                                    <div class="img-remover">
+                                        <img src="../imagens/images (12).jfif" alt="">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="itens-carrinho">
+                                <section class="item">
+                                    <div class="img-item">
+                                        <img src="../imagens/images (11).jfif" alt="jogo01">
+                                </div>
+                                    <div id="descricoes-itens">
+                                        <div class="descricao">
+                                            Jogo 01
+                                    </div>
+                                    <div class="valores">
+                                        <p>R$ 10,00</p>
+                                        <div class="input-quantidade">
+                                            <input type="number" nome="quant01" id="quant01" class="input-item" value="1">
+                                        </div>
+                                        <p>R$ 10,00</p>
+                                        <div class="img-remover">
+                                            <img src="../imagens/images (12).jfif" alt="">
+                                        </div>
+                                    </div>
+                                </section>
+
+                                
+
+            </section>
+        </section>
+
+            <div id="valores-carrinho">
+                <div id="div-cep">
+                    <h2 class="titulo-valores-carrinho">CEP</h2>
+                    <div id="input-cep"><input type="text" name="input-cep" id="input-cep" 
+                    class="input-cep"></div>
+                    </div>
+
+                    <div id="div-calc-valor">
+                        <h2 class="titulo-valores-carrinho">Valor Total</h2>
+                        <p id="valor-pagar" class="valor">R$ 10,00</p>
+
+                        <h2 class="titulo-valores-carrinho">Valor Total</h2>
+                        <p id="valor-pagar" class="valor">R$ 10,00</p>
+                    </div>
+
+                    <div id="div-calc-valor">
+                        <h2 class="titulo-valores-carrinho">Valor Total</h2>
+                        <p id="valor-pagar" class="valor">R$ 10,00</p>
+                    </div>
+
+                    <button id="btn-continuar" class="btn-carrinho">Continuar Compra</button>
+                    <button id="btn-finalizar" class="btn-carrinho">Finalizar Compra</button>
+            </div>
+        </section>
+
+
+
+
+
+
                 
-                <div class="produto" data-id="1" data-preco="10.00">
-                    <div class="produto-info">
-                        <div class="produto-img">Camiseta</div>
-                        <div class="produto-detalhes">
-                            <h3>Jogo PlayStation</h3>
-                            <p>R$ 10,00</p>
-                        </div>
-                    </div>
-                    <div class="produto-acoes">
-                        <div class="qtd-seletor">
-                            <button class="qtd-btn" onclick="alterarQuantidade(this, -1)">-</button>
-                            <span class="qtd-valor">1</span>
-                            <button class="qtd-btn" onclick="alterarQuantidade(this, 1)">+</button>
-                        </div>
-                        <button class="btn-remover" onclick="removerProduto(this)">Remover</button>
-                    </div>
-                </div>
-    
-                <div class="produto" data-id="2" data-preco="10.00">
-                    <div class="produto-info">
-                        <div class="produto-img">Jogo</div>
-                        <div class="produto-detalhes">
-                            <h3>Jogo PlayStation</h3>
-                            <p>R$ 10,00</p>
-                        </div>
-                    </div>
-                    <div class="produto-acoes">
-                        <div class="qtd-seletor">
-                            <button class="qtd-btn" onclick="alterarQuantidade(this, -1)">-</button>
-                            <span class="qtd-valor">1</span>
-                            <button class="qtd-btn" onclick="alterarQuantidade(this, 1)">+</button>
-                        </div>
-                        <button class="btn-remover" onclick="removerProduto(this)">Remover</button>
-                    </div>
-                </div>
-    
-            </div>
-    
-            <div class="resumo-carrinho">
-                <h2>Resumo do Pedido</h2>
-                <div class="resumo-linha">
-                    <span>Subtotal</span>
-                    <span id="subtotal">R$ 20,00</span>
-                </div>
-                <div class="resumo-linha">
-                    <span>Frete</span>
-                    <span id="frete">R$ 15,00</span>
-                </div>
-                <div class="resumo-linha resumo-total">
-                    <span>Total</span>
-                    <span id="total">R$ 35,00</span>
-                </div>
-                <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        const VALOR_FRETE = 15.00
-    
-        function calcularTotais() {
-            const produtos = document.querySelectorAll('.produto')
-            let subtotal = 0
-
-            produtos.forEach(produto => {
-                const preco = parseFloat(produto.getAttribute('data-preco'));
-                const quantidade = parseInt(produto.querySelector('.qtd-valor').textContent)
-                subtotal += preco * quantidade;
-            });
-    
-            //CARRINHO VAZIO
-            const freteAtual = produtos.length > 0 ? VALOR_FRETE : 0;
-            const total = subtotal + freteAtual;
-    
-
-            document.getElementById('subtotal').textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`
-            document.getElementById('frete').textContent = `R$ ${freteAtual.toFixed(2).replace('.', ',')}`
-            document.getElementById('total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`
-        }
-    
-        function alterarQuantidade(botao, mudanca) {
-            const elementoQtd = botao.parentNode.querySelector('.qtd-valor')
-            let qtdAtual = parseInt(elementoQtd.textContent)
-            
-            qtdAtual += mudanca;
-    
-            if (qtdAtual >= 1) {
-                elementoQtd.textContent = qtdAtual
-                calcularTotais();
-            }
-        }
-    
-        function removerProduto(botao) {
-            const produtoElemento = botao.closest('.produto')
-            produtoElemento.remove();
-            
-            const lista = document.getElementById('lista-produtos')
-            if (lista.children.length === 0) {
-                lista.innerHTML = '<p style="color: #777; text-align: center; padding: 20px;">Seu carrinho está vazio.</p>'
-            }
-            
-            calcularTotais()
-        }
-    
-        function finalizarCompra() {
-            const produtos = document.querySelectorAll('.produto')
-            if(produtos.length === 0) {
-                alert("Seu carrinho está vazio!")
-            } else {
-                alert("Pedido enviado com sucesso! Obrigado por comprar conosco.")
-            }
-        }
-    </script>
     
     <footer id="rodape">
         <h2>&copy 2026 SuaLoja S.A. Todos os Diretos Reservados</h2>
