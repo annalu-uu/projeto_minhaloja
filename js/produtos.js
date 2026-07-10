@@ -7,8 +7,73 @@ const sectionCards = document.querySelector('#cards')
 //CARREGANDO OS CARDS
 const listarProdutos = () => {
 
-    //LIMPANDO A SECTION cards
+   
+
+//CHAMANDO A FUNÇÃO listarProdutos
+listarProdutos()
+
+//MONTANDO OS MENUS SEÇÕES
+const menuSecoes = () => {
+    const mapSecoes = new Map()
+
+    produtos.forEach((elem)=>{
+        mapSecoes.set(elem.id_secao, elem)
+})
+
+    const secoesFiltradas = Array.from(mapSecoes.values())
+
+    console.log(secoesFiltradas)
+
+    return secoesFiltradas
+
+}
+
+//FUNÇÃO PARA INSERIR OS MENUS NA LISTA
+const carregaSecoes = () =>{
+    //PEGANDO O ELEMENTO ul menu-secoes DO DOM
+    const ulMenuSecoes = document.querySelector('#menu-secoes')
+
+    //LIMPANDO O ELEMENTO DO DOM
+    ulMenuSecoes.innerHTML = ''
+
+    //CHAMANDO A FUNÇÃO menuSecoes E PERCORRENDO O ARRAY DE SEÇÕES JÁ SELECIONADAS
+    menuSecoes().forEach((elem, i) => {
+        //CRIANDO O ELEMENTO li
+        const liMenu = document.createElement('li')
+
+        //CRIANDO O a ATRIBUINDO O NOME DA SEÇÃO
+        const aMenu = document.createElement('a')
+        aMenu.setAttribute('href', '#')
+        aMenu.setAttribute('class', 'lnk-secao')
+        aMenu.innerHTML = elem.secoes
+
+        aMenu.addEventListener('click',()=>{
+            filtroProduto(elem.id_secao)
+        })
+
+        //ADICIONADO O ELEMENTO FILHO a NO li
+        liMenu.appendChild(aMenu)
+
+        //ADICIONADO O ELEMENTO FILHO liMenu NO OBJETO DOM
+        ulMenuSecoes.appendChild(liMenu)
+})
+
+}
+
+carregaSecoes()
+
+//FUNÇÃO FILTRO PRODUTO
+const filtroProduto = (idSecao)=>{
+    //FILTRANDO OS PRODUTOS A PARTIR DO REPETIÇÃO filter
+    return produtos.filter(elem => elem.id_secao === idSecao)
+}
+
+//FUNÇÃO MONTA CARDS
+const montaCards = (objProdutos) => {
+      //LIMPANDO A SECTION cards
     sectionCards.innerHTML = ''
+}
+
 
 
     //PERCIRRENDO O ARRAY DE PRODUTOS
@@ -49,5 +114,3 @@ const listarProdutos = () => {
 
 }
 
-//CHAMANDO A FUNÇÃO listarProdutos
-listarProdutos()
