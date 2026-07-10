@@ -46,4 +46,4 @@ const produtos = [
     { id_produto: 38, valor_unitario: 10.00, unidade: "UN", caminho_imagem: "images/hardware/charging_station.jpg", id_secao: 4, secao: "Consoles e Acessórios" },
     { id_produto: 39, valor_unitario: 10.00, unidade: "UN", caminho_imagem: "images/hardware/ps_vr2.jpg", id_secao: 4, secao: "Consoles e Acessórios" },
     { id_produto: 40, valor_unitario: 10.00, unidade: "UN", caminho_imagem: "images/hardware/hd_camera_ps5.jpg", id_secao: 4, secao: "Consoles e Acessórios" }
-  ];
+]
