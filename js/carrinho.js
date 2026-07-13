@@ -13,12 +13,39 @@ const addItem = (objItem) => {
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
     const listaItens = JSON.parse(sessionStorage.getItem('carrinhoSessao'))
-
-    itensCarrinho.forEach((elem, i) => {
-        //console.log(`elemento ${i + 1} - ${elem. descricao_produto} - ${elem.valor_unitario}${elem.unidade}`)
-        alert(`elemento ${i + 1} - ${elem. descricao_produto} - ${elem.valor_unitario}${elem.unidade}`)
-    })
+        
+    montaTelaCarrinho(listItens)
+        
     }
+
+//MONTAR TELA CARRINHO
+const montaTelaCarrinho = (objListaItens) => {
+    const sectionItensCarrinho = document.querySelector('#itens-carrinho')
+
+    objListaItens.forEach((elem, i) => {
+        const sectionItem = document.createElement('section')
+        sectionItem.setAttribute('class', item)
+
+        const divImgItem = document.createElement('div')
+        divImgItem.setAttribute('class', 'img-item')
+
+        const imgItem = document.createElement('img')
+        imgItem.setAttribute('src', elem.caminho_imagem)
+        imgItem.setAttribute('alt', elem.descricao_produto)
+
+        imgItem.appendChild(imgItem)
+
+        const divDescricaoItens = document.createElement('div')
+        divDescricaoitens.setAttribute('class', 'descricao-itens')
+
+        const divDescricao = document.createElement('div')
+        divDescricao.setAttribute('class', 'descricao')
+        
+
+
+
+    })
+}
 
 
 
