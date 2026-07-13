@@ -1,5 +1,6 @@
-//IMPORTANTE: Adicionada a extensão '.js' necessária para ES Modules no navegador
+//IMPORTANDO
 import { produtos } from './lista_produtos.js'
+import { addItem } from './carrinho.js'
 
 // CARREGANDO PRODUTOS
 const carregandoProdutos = (idSecao) => {
@@ -140,6 +141,11 @@ const montaCards = (objProdutos) => {
         const btnCard = document.createElement('button')
         btnCard.setAttribute('class', 'btn-add')
         btnCard.innerHTML = 'Adicionar'
+
+        btnCard.addEventListener('click', ()=>{
+            addItem(elem)
+            window.location.href = 'paginas/carrinho.html'
+        })
 
         // Adicionando os elementos filhos ao divCard
         divCard.appendChild(imgCard)
