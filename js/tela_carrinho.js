@@ -1,29 +1,11 @@
-//CRIANDO O ARRAY DE ITENS DO CARRINH0
-const itensCarrinho = JSON.parse(sessionStorage.getItem("carrinhoSessao")) || []
-//const itensCarrinho2 = JSON.parse(sessionStorage.get('carrinhoSessao')) || []
+import { listItens } from "./carrinho.js"
 
-//FUNÇÃO PARA ADICIONAR UM ITEM
-const addItem = (objItem) => {
-    itensCarrinho.push(objItem)
-
-    sessionStorage.setItem('carrinhoSessao', itensCarrinho)
-    listItens()
-}
-
-//FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
-const listItens = () => {
-    const listaItens = JSON.parse(sessionStorage.getItem('carrinhoSessao'))
-        
-    montaTelaCarrinho(listItens)
-        
-    }
-
-/*
-//MONTAR TELA CARRINHO
-const montaTelaCarrinho = (objListaItens) => {
+const montaTelaCarrinho = () => {
     const sectionItensCarrinho = document.querySelector('#itens-carrinho')
 
-    objListaItens.forEach((elem, i) => {
+    sectionItensCarrinho.innerHTML = ''
+
+    listItens.forEach((elem, i) => {
         const sectionItem = document.createElement('section')
         sectionItem.setAttribute('class', item)
 
@@ -78,10 +60,3 @@ const montaTelaCarrinho = (objListaItens) => {
     })
 }
 
-*/
-
-
-
-//EXPORTAÇÃO
-
-export{ addItem, listItens }
