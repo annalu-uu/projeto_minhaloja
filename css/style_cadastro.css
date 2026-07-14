@@ -145,7 +145,7 @@
     width: 100%;
     padding: 10px;
     background: white;
-    color: black;
+    color: rgb(215, 94, 245);
     border: 1px solid #999;
 }
 
@@ -170,22 +170,22 @@
 }
 
 #resumo button:first-of-type{
-    background-color: #401f5b;
+    background-color: #401f5b
 }
 
 #resumo button:last-of-type{
     background-color: #d5d1ec;
-    color: black;
+    color: rgb(132, 16, 161)
 }
 
 .nome{
-    width: 140px;
+    width: 140px
 }
 
 .preco{
-    width: 80px;
+    width: 80px
 }
 
 #rodape{
-    width: 200%;
+    width: 200%
 }
