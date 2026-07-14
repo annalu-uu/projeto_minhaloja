@@ -60,3 +60,6 @@ const montaTelaCarrinho = () => {
     })
 }
 
+
+
+montaTelaCarrinho()

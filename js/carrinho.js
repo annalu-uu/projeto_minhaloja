@@ -7,16 +7,15 @@ const addItem = (objItem) => {
     itensCarrinho.push(objItem)
 
     sessionStorage.setItem('carrinhoSessao', itensCarrinho)
-    listItens()
 }
 
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
-    const listaItens = JSON.parse(sessionStorage.getItem('carrinhoSessao'))
-        
-    montaTelaCarrinho(listItens)
-        
-    }
+    const listaItens = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || []
+
+    return listItens
+
+}
 
 /*
 //MONTAR TELA CARRINHO
@@ -84,4 +83,4 @@ const montaTelaCarrinho = (objListaItens) => {
 
 //EXPORTAÇÃO
 
-export{ addItem, listItens }
+export { addItem, listItens }
