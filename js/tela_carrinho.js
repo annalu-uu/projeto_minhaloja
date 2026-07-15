@@ -13,6 +13,10 @@ const montaTelaCarrinho = () => {
         imgItem.setAttribute('src', elem.caminho_imagem)
         imgItem.setAttribute('alt', elem.descricao_produto)
 
+        
+
+    
+
         const h2Descricao = document.createElement('h2')
         h2Descricao.setAttribute('class', 'titulo')
         h2Descricao.innerHTML = elem.descricao_produto
@@ -26,7 +30,7 @@ const montaTelaCarrinho = () => {
         inputQuantidade.setAttribute('name', `quant${i}`)
         inputQuantidade.setAttribute('id', `quant${i}`)
         inputQuantidade.setAttribute('class', 'input-item')
-        inputQuantidade.setAttribute('value', 1)
+        inputQuantidade.setAttribute('value', elem.quantidade)
         
         const pSubTotal = document.createElement('p')
         pSubTotal.setAttribute('class', 'vlr-subtotal')
