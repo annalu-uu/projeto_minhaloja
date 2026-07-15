@@ -37,15 +37,16 @@ const montaTelaCarrinho = () => {
         aRemover.setAttribute('class', 'lnk-remover')
         aRemover.innerHTML = `Remover`
 
+        aRemover.addEventListener('click',()=>{
+            if(confirm(`Tem certeza que deseja remover ${elem.descricao_produto}`)){
+                removeItemTela(i)
+            }
+        })
+
         const imgRemover = document.createElement('img')
         imgRemover.setAttribute('src', '../imagens/icone/remover.png')
         imgRemover.setAttribute('alt', 'remover')
 
-        imgRemover = document.addEventListener('click',()=>{
-            if(confirm(`Tem certeza que deseja remover ${elem.descricao_produto}`)){
-                removeItemTela
-            }
-        })
 
         imgRemover.addEventListener('click', () => {
             removeItem(i);
