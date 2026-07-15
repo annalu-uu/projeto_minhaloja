@@ -1,86 +1,34 @@
 //CRIANDO O ARRAY DE ITENS DO CARRINH0
 const itensCarrinho = JSON.parse(sessionStorage.getItem("carrinhoSessao")) || []
-//const itensCarrinho2 = JSON.parse(sessionStorage.get('carrinhoSessao')) || []
+
+//const itensCarrinho = JSON.parse(localStorage.get('carrinhoSessao')) || []
 
 //FUNÇÃO PARA ADICIONAR UM ITEM
 const addItem = (objItem) => {
     itensCarrinho.push(objItem)
 
-    sessionStorage.setItem('carrinhoSessao', itensCarrinho)
+    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
+    //localStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
 }
 
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
     const listaItens = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || []
 
-    return listItens
+    //const itensCarrinho2 = JSON.parse(localStorage.get('carrinhoSessao')) || []
+
+    return listaItens
 
 }
 
-/*
-//MONTAR TELA CARRINHO
-const montaTelaCarrinho = (objListaItens) => {
-    const sectionItensCarrinho = document.querySelector('#itens-carrinho')
+//FUNÇÃO REMOVER ITENS DO ARRAY
+const removeItem = (pos) =>{
+    itensCarrinho.splice(pos,1)
 
-    objListaItens.forEach((elem, i) => {
-        const sectionItem = document.createElement('section')
-        sectionItem.setAttribute('class', item)
-
-        const divImgItem = document.createElement('div')
-        divImgItem.setAttribute('class', 'img-item')
-
-        const imgItem = document.createElement('img')
-        imgItem.setAttribute('src', elem.caminho_imagem)
-        imgItem.setAttribute('alt', elem.descricao_produto)
-
-        imgItem.appendChild(imgItem)
-
-        const divDescricaoItens = document.createElement('div')
-        divDescricaoitens.setAttribute('class', 'descricao-itens')
-
-        const divDescricao = document.createElement('div')
-        divDescricao.setAttribute('class', 'descricao')
-        divDescricao.innerHTML = elem.descricao_produto
-
-        const divValores = document.createElement('div')
-        divValores.setAttribute('class', 'valores')
-
-        const pItem = document.createElement('p')
-        pItem.innerHTML = `R$ ${parseFloat(elem. valor_unitario).toFixed
-        (2).replace('.', '.')}`
-
-        const divQuant = document.createElement('div')
-        divQuant.setAttribute('class', input-quantidade)
-
-        const inputQuantidade = document.createElement('input')
-        inputQuantidade.setAttribute('type', 'number')
-        inputQuantidade.setAttribute('name', `quant${i}`)
-        inputQuantidade.setAttribute('id', `quant${i}`)
-        inputQuantidade.setAttribute('class', 'input-item')
-        inputQuantidade.setAttribute('value', 1)
-
-        divQuant.appendChild(inputQuantidade)
-
-        const pCal = document.createElement('p')
-        pCalc.innerHTML = `R$ ${elem.valor_unitario * 1}`
-
-        const imgRemover = document.createElement('img')
-        imgRemover.setAttribute('src', '../imagens/icones/remover.png')
-        imgRemover.setAttribute('alt', 'remover')
-
-        divValores.appendChild(pItem)
-        divValores.appendChild(divQuant)
-        divValores.appendChild(pCalc)
-        divValores.appendChild(imgRemover)
-
-
-    })
+    sessionStorage.setItem('carrinhoSessao', JSON.stringify
+    (itensCarrinho))
 }
-
-*/
-
 
 
 //EXPORTAÇÃO
-
-export { addItem, listItens }
+export { addItem, listItens, removeItem }

@@ -1,5 +1,5 @@
 export const produtos = [
-    // SEÇÃO 1: PlayStation (id_secao: 1)
+    // SEÇÃO 1: PlayStation (idSecao: 1)
     { id_produto: 1, descricao_produto: "God of War Ragnarök (PS5)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (1).jfif", id_secao: 1, secao: "PlayStation" },
     { id_produto: 2, descricao_produto: "The Last of Us Part I (PS5)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (2).jfif", id_secao: 1, secao: "PlayStation" },
     { id_produto: 3, descricao_produto: "Spider-Man 2 (PS5)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (3).jfif", id_secao: 1, secao: "PlayStation" },
@@ -11,7 +11,7 @@ export const produtos = [
     { id_produto: 9, descricao_produto: "Uncharted: Legacy of Thieves (PS5)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (9).jfif", id_secao: 1, secao: "PlayStation" },
     { id_produto: 10, descricao_produto: "Ratchet & Clank: Rift Apart (PS5)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (10).jfif", id_secao: 1, secao: "PlayStation" },
 
-    // SEÇÃO 2: Xbox (id_secao: 2)
+    // SEÇÃO 2: Xbox (idSecao: 2)
     { id_produto: 11, descricao_produto: "Halo Infinite (Xbox)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (11).jfif", id_secao: 2, secao: "Xbox" },
     { id_produto: 12, descricao_produto: "Forza Horizon 5 (Xbox)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (12).jfif", id_secao: 2, secao: "Xbox" },
     { id_produto: 13, descricao_produto: "Starfield (Xbox)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (13).jfif", id_secao: 2, secao: "Xbox" },
@@ -23,7 +23,7 @@ export const produtos = [
     { id_produto: 19, descricao_produto: "Fable (Xbox)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (19).jfif", id_secao: 2, secao: "Xbox" },
     { id_produto: 20, descricao_produto: "Avowed (Xbox)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (20).jfif", id_secao: 2, secao: "Xbox" },
 
-    // SEÇÃO 3: Nintendo (id_secao: 3)
+    // SEÇÃO 3: Nintendo (idSecao: 3)
     { id_produto: 21, descricao_produto: "The Legend of Zelda: Tears of the Kingdom", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (21).jfif", id_secao: 3, secao: "Nintendo" },
     { id_produto: 22, descricao_produto: "Super Mario Bros. Wonder", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (22).jfif", id_secao: 3, secao: "Nintendo" },
     { id_produto: 23, descricao_produto: "Mario Kart 8 Deluxe", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (23).jfif", id_secao: 3, secao: "Nintendo" },
@@ -35,7 +35,7 @@ export const produtos = [
     { id_produto: 29, descricao_produto: "Splatoon 3", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (29).jfif", id_secao: 3, secao: "Nintendo" },
     { id_produto: 30, descricao_produto: "Xenoblade Chronicles 3", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (30).jfif", id_secao: 3, secao: "Nintendo" },
 
-    // SEÇÃO 4: PC / Multiplataforma (id_secao: 4)
+    // SEÇÃO 4: PC / Multiplataforma (idSecao: 4)
     { id_produto: 31, descricao_produto: "Elden Ring (PC)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (31).jfif", id_secao: 4, secao: "PC Games" },
     { id_produto: 32, descricao_produto: "Cyberpunk 2077 (PC)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (32).jfif", id_secao: 4, secao: "PC Games" },
     { id_produto: 33, descricao_produto: "Baldur's Gate 3 (PC)", valor_unitario: 10.00, unidade: "UN", caminho_imagem: "imagens/images (33).jfif", id_secao: 4, secao: "PC Games" },

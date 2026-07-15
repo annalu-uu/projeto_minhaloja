@@ -41,14 +41,19 @@
     list-style: none;
 }
 
-#menu ul img{
-    width: 45px;
-    height: 25px;
+#form{
+    width: 450px;
+    height: 250px;
+    
+}
+
+input, label{
+    display: block;
 }
 
 /*FORMATANDO O DIV*/  
 
-#principal {
+/* #principal {
       width: 900px;
       margin: 30px auto;
       display: flex;
@@ -62,4 +67,4 @@
         display: flex;
         flex-direction: column;
 }
-
+ */
