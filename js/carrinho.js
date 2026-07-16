@@ -6,18 +6,15 @@ const itensCarrinho = JSON.parse(sessionStorage.getItem("carrinhoSessao")) || []
 //FUNÇÃO ITEM
 const item = (objProduto) => {
 
-    const item = {
+    return {
         id_produto: objProduto.id_produto,
         descricao_produto: objProduto.descricao_produto,
         valor_unitario: objProduto.valor_unitario,
         unidade: objProduto.unidade,
         caminho_imagem: objProduto.caminho_imagem,
         caminho_image_lixo: objProduto.caminho_image_lixo,
-        quantidade: 1,
-        /*totalItem: parseFloat(quantidade) * parseFloat(objProduto.valor_unitario)*/
+        quantidade: 1
     }
-
-    return item
 
 }
 
@@ -26,7 +23,7 @@ const item = (objProduto) => {
 const addItem = (objItem) => {
 
     const indice = itensCarrinho.findIndex(
-        elem => elem.idProduto == objItem.idProduto
+        elem => elem.id_produto == objItem.id_produto
     )
 
     if (indice != -1) {
@@ -40,37 +37,31 @@ const addItem = (objItem) => {
         })
     }
 
-    sessionStorage.setItem(
-        "carrinhoSessao",
-        JSON.stringify(itensCarrinho)
-    )
+    sessionStorage.setItem("carrinhoSessao", JSON.stringify(itensCarrinho))
 }
-
 
 
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
-    const listaItens = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || []
 
-    //const itensCarrinho2 = JSON.parse(localStorage.get('carrinhoSessao')) || []
-
-    return listaItens
-
-
+    return JSON.parse(sessionStorage.getItem('carrinhoSessao')) || []
 }
 
 //FUNÇÃO REMOVER ITENS DO ARRAY
 const removeItem = (pos) =>{
-    itensCarrinho.splice(pos,1)
-
+    itensCarrinho.splice(pos, 1)
     sessionStorage.setItem('carrinhoSessao', JSON.stringify
     (itensCarrinho))
 }
 
-
-//EXPORTAÇÃO
-export { addItem, listItens, removeItem }
-export const atualizaQuantidade = (posicao, novaQuantidade) => {
+// FUNÇÃO PARA ATUALIZAR A QUANTIDADE
+const atualizaQuantidade = (posicao, novaQuantidade) => {
     
-    carrinho[posicao].quantidade = novaQuantidade
+    itensCarrinho[posicao].quantidade = novaQuantidade
+
+   
+    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
 }
+
+// EXPORTAÇÕES
+export { addItem, listItens, removeItem, atualizaQuantidade }
