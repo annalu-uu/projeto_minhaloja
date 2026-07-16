@@ -32,7 +32,7 @@ const montaTelaCarrinho = () => {
         inputQuantidade.setAttribute('value', elem.quantidade)
         inputQuantidade.setAttribute('min', '1')
 
-        // Ouvir a mudança de quantidade
+        //MUDANDO A QUANTIDADE
         inputQuantidade.addEventListener('change', (e) => {
             let novaQuantidade = parseInt(e.target.value, 10)
 
