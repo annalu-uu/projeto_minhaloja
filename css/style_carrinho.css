@@ -37,6 +37,17 @@
     box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
+#cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    height: 100px;
+    background-color: rgb(243, 189, 247);
+}
+
+
 .item:hover{
     background:#f8f3ff;
 }
@@ -128,3 +139,4 @@
 #btn-finalizar:hover{
     background:#215188;
 }
+

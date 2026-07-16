@@ -1,27 +1,112 @@
 @import url(style_estrutura_pagina.css);
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: roboto; 
- }
+    font-family: roboto, sans-serif; 
+}
 
-#div-login{
-    width: 650px;
-    padding: 5px;
+#cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
     height: 100px;
-    margin: 20px 0;
-    background-color: rgb(190, 130, 245);
-    color: aliceblue;
+    background-color: rgb(243, 189, 247);
+}
+
+#menu ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#div-login {
+    width: 90%;
+    max-width: 450px; 
+    margin: 60px auto; 
+    padding: 30px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+label, input {
+    display: block;
+    width: 100%;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555; 
+}
+
+input {
+    height: 40px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+#div-login button {
+    margin-top: 25px;
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(50% - 8px); 
+    display: inline-block;
+}
+
+/* Botão Entrar (Roxo) */
+#div-login button:first-of-type {
+    background-color: rgb(190, 130, 245); /* O seu roxo */
+    color: #ffffff;
+    margin-right: 12px;
+}
+
+/* Botão Limpar (Cinza claro) */
+#div-login button:last-of-type {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+/* Texto de ajuda inferior */
+h6 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #666;
+}
+
+
+/*FORMATAR O RADAPÉ*/
+
+#rodape{
+    width: 100%;
+    height: 180px;
+    background-color: var(--cor02);
+    margin: 20px 0px;
+    padding: 10px;
+    color: #42008d;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: flex;
-
 }
 
-input{
-    height: 20px;
-    padding: 5px;
-    margin: 10px;
-}

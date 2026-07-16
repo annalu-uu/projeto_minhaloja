@@ -31,13 +31,16 @@
 }
 
 /*FORMATANDO O CEBEÇALHO*/
-#cabecalho{
+#cabecalho {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
-    height: 60px;
+    padding: 20px 60px;
+    height: 100px;
+    background-color: rgb(243, 189, 247);
 }
+
 
 /*CONFIGURANDO MENU NA HORIZONTAL*/
 #menu ul{

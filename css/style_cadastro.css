@@ -1,14 +1,14 @@
 @import url(style_estrutura_pagina.css);
 
-/*DEFINE AS CONFIGURAÇÔES EM TODOS OS ELEMENTOS DA PÁGINA*/
+/* DEFINE AS CONFIGURAÇÕES EM TODOS OS ELEMENTOS DA PÁGINA */
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
-/*CRIANDO VARIÁVEIS*/
+/* CRIANDO VARIÁVEIS */
 :root{
     --cor01: #d5d1ec;
     --cor02: #b368fa;
@@ -16,16 +16,14 @@
     --branca: #ffffff;
 }
 
-/*FORMATANDO A TAG main PELO ID geral*/
-#geral{
+#geral {
     margin: auto;
-    width: 100%px;
-    max-width: 100%;
+    width: 100%; 
 }
 
-/*FORMATANDO O CABEÇALHO*/
-#cabecalho{
-    width: 200%;
+/* FORMATANDO O CABEÇALHO */
+#cabecalho {
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,37 +32,96 @@
     background-color: rgb(243, 189, 247);
 }
 
-/*CONFIGURANDO MENU DA HORIZONTAL*/
+/* CONFIGURANDO MENU DA HORIZONTAL */
 #menu ul {
     display: flex;
     gap: 50px;
     list-style: none;
 }
 
-#form{
-    width: 450px;
-    height: 250px;
-    
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
-input, label{
+/* FORMATANDO A SEÇÃO DO FORMULÁRIO */
+#form {
+    width: 100%;
+    max-width: 500px; 
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--branca);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+#form h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid var(--cor02);
+    padding-bottom: 8px;
+}
+
+/* ESTILIZANDO INPUTS E LABELS */
+label {
     display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
 
-/*FORMATANDO O DIV*/  
-
-/* #principal {
-      width: 900px;
-      margin: 30px auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 5px;
-    }
-    
-#conteudo{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+input {
+    display: block;
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
 }
- */
+
+input:focus {
+    outline: none;
+    border-color: var(--cor02);
+}
+
+/* BOTÕES DE CADASTRAR E LIMPAR */
+#form button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(50% - 10px);
+    display: inline-block;
+}
+
+/*BOTÃO CADASTRAR*/
+#form button:first-of-type {
+    background-color: var(--cor02);
+    color: var(--branca);
+    margin-right: 15px;
+}
+
+/*BOTÃO LIMPAR*/
+#form button:last-of-type {
+    background-color: #e5e7eb;
+    color: #385584;
+}
+
+/*FORMATANDO O RODAPÉ*/
+#rodape {
+    background-color: var(--cor02); 
+    color: var(--branca);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+}
