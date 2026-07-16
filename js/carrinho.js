@@ -22,14 +22,31 @@ const item = (objProduto) => {
 }
 
 
-
 //FUNÇÃO PARA ADICIONAR UM ITEM
 const addItem = (objItem) => {
-    itensCarrinho.push(item(objItem))
 
-    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
-    //localStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
+    const indice = itensCarrinho.findIndex(
+        elem => elem.idProduto == objItem.idProduto
+    )
+
+    if (indice != -1) {
+        //PRODUTO EXISTE
+        itensCarrinho[indice].quantidade++
+    } else {
+        //PRODUTO NÃO EXISTE
+        itensCarrinho.push({
+            ...objItem,
+            quantidade: 1
+        })
+    }
+
+    sessionStorage.setItem(
+        "carrinhoSessao",
+        JSON.stringify(itensCarrinho)
+    )
 }
+
+
 
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
@@ -38,6 +55,7 @@ const listItens = () => {
     //const itensCarrinho2 = JSON.parse(localStorage.get('carrinhoSessao')) || []
 
     return listaItens
+
 
 }
 
@@ -52,3 +70,7 @@ const removeItem = (pos) =>{
 
 //EXPORTAÇÃO
 export { addItem, listItens, removeItem }
+export const atualizaQuantidade = (posicao, novaQuantidade) => {
+    
+    carrinho[posicao].quantidade = novaQuantidade
+}

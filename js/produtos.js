@@ -46,14 +46,14 @@ const carregaSecoes = () => {
     // Limpando o elemento do DOM
     ulMenuSecoes.innerHTML = ''
 
-    // Criando o elemento li para a opção "TODO"
+    // Criando o elemento li para a opção "TODOs"
     const liMenuTodo = document.createElement('li')
 
     // Criando o elemento a atribuindo o nome da seção
     const aMenuTodo = document.createElement('a')
     aMenuTodo.setAttribute('href', '#')
     aMenuTodo.setAttribute('class', 'lnk-secao')
-    aMenuTodo.innerHTML = 'TODO'
+    aMenuTodo.innerHTML = 'TODOS'
 
     // Adicionado e.preventDefault() para evitar que a página recarregue/suba ao topo
     aMenuTodo.addEventListener('click', (e) => {
