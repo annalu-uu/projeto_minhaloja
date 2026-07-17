@@ -3,13 +3,13 @@ import { produtos } from './lista_produtos.js'
 import { addItem } from './carrinho.js'
 
 // CARREGANDO PRODUTOS
-const carregandoProdutos = (idSecao) => {
-    if (idSecao == 0) {
+const carregandoProdutos = (id_secao) => {
+    if (id_secao == 0) {
         // Chamando as funções montaCards e listarProdutos
         montaCards(listarProdutos())
     } else {
         // Chamando a função filtroProduto e renderizando os cards filtrados
-        montaCards(filtroProduto(idSecao))
+        montaCards(filtroProduto(id_secao))
     }
 
     carregaSecoes()
