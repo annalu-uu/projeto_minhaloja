@@ -46,7 +46,18 @@ const consultaCep = async (cep) => {
 //CASO HAJA QUALQUER ERRO É DISPARADA UMA EXCEÇÃO
 }catch(erro){
     console.log("ERRO", erro.message)
+    }
+
+
+}
+//OBJETO LITERAL DOS INPUTS
+const campos = {
+    logradouro: document.querySelector('#logradouro'),
+    bairro: document.querySelector('#bairro'),
+    localidade: document.querySelector('#localidade')
 }
 
+//FUNÇÃO CARREGA INPUTS
+const carregaInput = (objEndereco) =>{
 
 }
