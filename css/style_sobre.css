@@ -1,4 +1,5 @@
 @import url(style_estrutura_pagina.css);
+@import url('../css/style_estrutura_pagina.css'); 
 
 /*CONFIGURAÇÕES GERAIS E RESET*/
 *{
