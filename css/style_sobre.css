@@ -10,8 +10,8 @@
 }
 
 body {
-    background-color: #e0ebf3; 
-    color: #66aaee; 
+    background-color: #ffffff; 
+    color: #a631c4; 
     line-height: 1.8;
     padding: 40px 20px;
 }
@@ -24,7 +24,7 @@ body {
     padding: 50px;
     border-radius: 16px;
     box-shadow: 0 15px 35px rgba(192, 63, 224, 0.87);
-    border-top: 5px solid #66fcf1; 
+    border-top: 5px solid #62c4bd; 
 }
 
 #cabecalho {
