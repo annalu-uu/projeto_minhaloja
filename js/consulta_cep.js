@@ -54,7 +54,8 @@ const consultaCep = async (cep) => {
 const campos = {
     logradouro: document.querySelector('#logradouro'),
     bairro: document.querySelector('#bairro'),
-    localidade: document.querySelector('#localidade')
+    localidade: document.querySelector('#localidade'),
+    uf: document.querySelector('#uf')
 }
 
 //FUNÇÃO CARREGA INPUTS
